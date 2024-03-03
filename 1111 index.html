@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quer Namorar Comigo?</title>
+  <style>
+    body {
+      background-color: #ffd6e0; /* Cor de fundo rosa suave */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para a caixa */
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ff85a2; /* Cor de fundo do botão */
+      color: white; /* Cor do texto do botão */
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #ff5c79; /* Cor de fundo do botão ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <p>Quer namorar comigo?</p>
+    <button id="sim" onclick="mostrarMensagem('Sabiaaaa! Eu te amo.');">Sim</button>
+    <button id="nao" onclick="naoCorre(this);">Não</button>
+  </div>
+
+  <script>
+    function mostrarMensagem(mensagem) {
+      alert(mensagem);
+      const box = document.getElementById("box");
+      box.innerHTML = `
+        <p>${mensagem}</p>
+        <p>Assista esse vídeo:</p>
+        <a href="https://youtu.be/JRVD-pndqY0?si=OwIeKRzikOjeszPq" target="_blank">Clique aqui</a>
+      `;
+      box.style.backgroundColor = "#b3e0ff"; /* Alterando a cor de fundo após a resposta */
+    }
+
+    function naoCorre(botaoNao) {
+      alert("Essa opção não existe!");
+      botaoNao.style.display = "none"; /* Ocultando o botão "Não" após clicar */
+    }
+  </script>
+</body>
+</html>
+
+
+
